@@ -9,12 +9,15 @@
  * - b) ThreadPool class for this task and Semaphore for waiting threads.
  */
 
+using MultiThreading.Task4.Threads.Join.Tasks;
 using System;
+using System.Threading;
 
 namespace MultiThreading.Task4.Threads.Join
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("4.	Write a program which recursively creates 10 threads.");
@@ -25,10 +28,15 @@ namespace MultiThreading.Task4.Threads.Join
             Console.WriteLine("- b) ThreadPool class for this task and Semaphore for waiting threads.");
 
             Console.WriteLine();
+            ICreatingThreads taskA = new TaskA();
+            ICreatingThreads taskB = new TaskB();
 
-            // feel free to add your code
+            taskA.CreateThreads();
+            taskB.CreateThreads();
+
 
             Console.ReadLine();
         }
+
     }
 }
