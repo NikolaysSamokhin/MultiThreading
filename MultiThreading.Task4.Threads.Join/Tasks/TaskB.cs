@@ -9,7 +9,7 @@ namespace MultiThreading.Task4.Threads.Join.Tasks
     public class TaskB : ICreatingThreads
     {
     
-        Semaphore semaphore = new Semaphore(3, 10);
+        Semaphore semaphore = new Semaphore(3, 3);
         public void CreateThreads(int count = 10)
         {
             if (count == 0)
